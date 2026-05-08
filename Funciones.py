@@ -104,3 +104,30 @@ def calcular_factorial(numero:int) -> int:
         factorial = numero * calcular_factorial(numero -1)
     
     return factorial
+
+
+def calcular_fibonacci(numero: int) -> str | int:
+    """
+    Calcula el n-ésimo término de la sucesión de Fibonacci de forma recursiva.
+
+    La sucesión de Fibonacci se define así:
+        F(0) = 0
+        F(1) = 1
+        F(n) = F(n-1) + F(n-2)  para todo n > 1
+
+    Parámetros:
+        numero (int): La posición en la sucesión que se desea calcular.
+                      Debe ser un entero no negativo.
+
+    Retorna:
+        int : El valor de Fibonacci en la posición indicada.
+        str : Mensaje de error si el número ingresado es negativo.
+    """
+    if numero < 0:
+        resultado = "Error: el número ingresado debe ser mayor o igual a cero."
+    elif numero == 0 or numero == 1:
+        resultado = numero
+    else:
+        resultado = calcular_fibonacci(numero - 1) + calcular_fibonacci(numero - 2)
+
+    return resultado

@@ -91,7 +91,8 @@ def mostrar_sub_menu_calculadora(numero_uno:int,numero_dos:int) -> None:
         print("5. Calcular resto")
         print("6. Calcular potencia")
         print("7. Calcular factorial")
-        print("8. Volver al menu principal")
+        print("8. Calcular fibonacci")
+        print("9. Volver al menu principal")
 
         opcion = input("Ingrese su opcion: ")
         #Match
@@ -118,9 +119,14 @@ def mostrar_sub_menu_calculadora(numero_uno:int,numero_dos:int) -> None:
             case "7":
                 resultado_a = Funciones.calcular_factorial(numero_uno)
                 resultado_b = Funciones.calcular_factorial(numero_dos)
-                print(f"{numero_uno}! = {resultado_a}")
-                print(f"{numero_dos}! = {resultado_b}")
+                print(f"a) {numero_uno}! = {resultado_a}")
+                print(f"b) {numero_dos}! = {resultado_b}")
             case "8":
+                resultado_a = Funciones.calcular_fibonacci(numero_uno)
+                resultado_b = Funciones.calcular_fibonacci(numero_dos)
+                print(f"a) Fibonacci de {numero_uno} = {resultado_a}")
+                print(f"b) Fibonacci de {numero_dos} = {resultado_b}")
+            case "9":
                 break
             case _:
                 print("OPCION INVALIDA")
